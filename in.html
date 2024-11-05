@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile Management</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Patient Profile Management</h2>
+    <form id="profileForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="Enter first name" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" placeholder="Enter last name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter age" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="bloodType">Blood Type:</label>
+        <input type="text" id="bloodType" placeholder="Enter blood type" required>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" placeholder="Enter contact number" required>
+
+        <label for="emergencyContact">Emergency Contact:</label>
+        <input type="text" id="emergencyContact" placeholder="Enter emergency contact number" required>
+
+        <label for="profilePicture">Profile Picture:</label>
+        <input type="file" id="profilePicture" accept="image/*">
+
+        <button type="submit">Save Profile</button>
+    </form>
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Scheduling</title>
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Schedule an Appointment</h2>
+    <form id="appointmentForm">
+        <label for="doctorName">Doctor Name:</label>
+        <input type="text" id="doctorName" placeholder="Enter doctor's name" required>
+
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" required>
+
+        <label for="appointmentTime">Appointment Time:</label>
+        <input type="time" id="appointmentTime" required>
+
+        <button type="submit">Schedule Appointment</button>
+    </form>
+
+    <h3>Upcoming Appointments</h3>
+    <ul id="appointmentsList"></ul>
+</div>
+
+<script src="appointment.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback System</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Submit Your Feedback</h2>
+    <form id="feedbackForm">
+        <label for="doctorNameFeedback">Doctor's Name:</label>
+        <input type="text" id="doctorNameFeedback" placeholder="Enter doctor's name" required>
+
+        <label for="rating">Rating:</label>
+        <select id="rating">
+            <option value="5">Excellent (5)</option>
+            <option value="4">Good (4)</option>
+            <option value="3">Average (3)</option>
+            <option value="2">Poor (2)</option>
+            <option value="1">Very Poor (1)</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" placeholder="Write your comments here..."></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>
+
+<script src="feedback.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription and Medication Tracking</title>
+    <link rel="stylesheet" href="prescription.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Prescription and Medication Tracking</h2>
+    <form id="prescriptionForm">
+        <label for="medicineName">Medicine Name:</label>
+        <input type="text" id="medicineName" placeholder="Enter medicine name" required>
+
+        <label for="dosage">Dosage:</label>
+        <input type="text" id="dosage" placeholder="Enter dosage (e.g., 500mg)" required>
+
+        <label for="frequency">Frequency:</label>
+        <input type="text" id="frequency" placeholder="Enter frequency (e.g., twice a day)" required>
+
+        <label for="doctor">Prescribed By:</label>
+        <input type="text" id="doctor" placeholder="Doctor's Name" required>
+
+        <button type="submit">Add Prescription</button>
+    </form>
+
+    <h3>Current Medications</h3>
+    <ul id="medicationList"></ul>
+</div>
+
+<script src="prescription.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Interaction</title>
+    <link rel="stylesheet" href="consultation.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Doctor Consultation</h2>
+    <form id="messageForm">
+        <label for="doctorSelect">Select Doctor:</label>
+        <select id="doctorSelect">
+            <option value="Dr. Smith">Dr. Smith - Cardiologist</option>
+            <option value="Dr. Lee">Dr. Lee - Neurologist</option>
+            <option value="Dr. Adams">Dr. Adams - Orthopedic</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <h3>Messages</h3>
+    <ul id="messagesList"></ul>
+</div>
+
+<script src="consultation.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Integration</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Payment Integration</h2>
+    <form id="paymentForm">
+        <label for="service">Service:</label>
+        <select id="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="appointment">Appointment</option>
+            <option value="consultation">Consultation</option>
+            <option value="prescription">Prescription</option>
+        </select>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" required>
+
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" required>
+            <option value="" disabled selected>Select payment method</option>
+            <option value="creditCard">Credit Card</option>
+            <option value="digitalWallet">Digital Wallet</option>
+            <option value="bankTransfer">Bank Transfer</option>
+        </select>
+
+        <button type="submit">Proceed to Payment</button>
+    </form>
+
+    <h3>Billing History</h3>
+    <ul id="billingHistory"></ul>
+</div>
+
+<script src="payment.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitoring</title>
+    <link rel="stylesheet" href="health_monitoring.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Health Monitoring</h2>
+    <form id="healthForm">
+        <label for="healthData">Enter Health Data:</label>
+        <input type="text" id="healthData" placeholder="e.g., Blood Pressure" required>
+
+        <label for="value">Value:</label>
+        <input type="number" id="value" placeholder="Enter value" required>
+
+        <button type="submit">Submit Health Data</button>
+    </form>
+
+    <h3>Health Data</h3>
+    <ul id="healthDataList"></ul>
+</div>
+
+<script src="health_monitoring.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Features</title>
+    <link rel="stylesheet" href="emergency.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Emergency Features</h2>
+    
+    <h3>Emergency Contact</h3>
+    <button id="callEmergencyButton">Call Ambulance</button>
+    
+    <h3>Emergency Information</h3>
+    <form id="emergencyInfoForm">
+        <label for="allergies">Known Allergies:</label>
+        <input type="text" id="allergies" placeholder="List your allergies" required>
+
+        <label for="chronicConditions">Chronic Conditions:</label>
+        <input type="text" id="chronicConditions" placeholder="List your chronic conditions" required>
+
+        <label for="medications">Current Medications:</label>
+        <input type="text" id="medications" placeholder="List your medications" required>
+
+        <button type="submit">Save Emergency Info</button>
+    </form>
+
+    <h3>Your Emergency Info</h3>
+    <ul id="emergencyInfoList"></ul>
+</div>
+
+<script src="emergency.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Education and Resources</title>
+    <link rel="stylesheet" href="health_education.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Health Education and Resources</h2>
+    
+    <input type="text" id="search" placeholder="Search for health resources..." />
+    <button id="searchButton">Search</button>
+
+    <h3>Resources</h3>
+    <ul id="resourceList"></ul>
+</div>
+
+<script src="health_education.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Language Support</title>
+    <link rel="stylesheet" href="language_support.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Select Your Language</h2>
+    <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+    </select>
+    
+    <h3 id="greeting">Welcome to the Patient Portal!</h3>
+</div>
+
+<script src="language_support.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security and Privacy Enhancements</title>
+    <link rel="stylesheet" href="security.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Security and Privacy Settings</h2>
+    
+    <h3>Enable Two-Factor Authentication</h3>
+    <button id="enable2FAButton">Enable 2FA</button>
+    
+    <h3>Role-Based Access Management</h3>
+    <p>Current Role: <span id="currentRole">Patient</span></p>
+    <button id="changeRoleButton">Change Role</button>
+</div>
+
+<script src="security.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Analytics Dashboard</h2>
+
+    <h3>Health Trends</h3>
+    <input type="number" id="weightInput" placeholder="Enter your weight" />
+    <button id="addWeightButton">Add Weight</button>
+
+    <h3>Your Weight History</h3>
+    <ul id="weightHistoryList"></ul>
+
+    <button id="downloadReportButton">Download Medical History</button>
+</div>
+
+<script src="analytics.js"></script>
+</body>
+</html>
